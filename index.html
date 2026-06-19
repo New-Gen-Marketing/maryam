@@ -403,6 +403,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero-video-frame {
   position: relative;
   aspect-ratio: 4 / 5;
+  min-height: 380px;
   width: 100%;
   max-width: 420px;
   margin: 0 auto;
@@ -904,7 +905,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 
   .hero { padding: 36px 0 60px; }
   .spine { display: none; }
-  .hero-inner { grid-template-columns: 1fr; gap: 8px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 8px; align-items: stretch; }
+  .hero-video-wrap {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 420px;
+    margin: 36px auto 0;
+  }
+  .hero-video-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
   .hero-badge { width: 84px; height: 84px; top: -8px; left: -8px; }
   .hero-badge__center { width: 34px; height: 34px; font-size: 14px; }
 
@@ -923,6 +935,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .header-inner { padding: 14px 20px; }
   .hero-title { font-size: 2.3rem; }
   .hero-tags { gap: 8px; }
+  .hero-video-frame { min-height: 320px; }
 }
 
 </style>
